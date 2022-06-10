@@ -1,20 +1,21 @@
 # It contains all the configs required in the project
 
-artifacts:
-  ARTIFACTS_DIR: artifacts
-  TRAINED_MODEL_DIR: model
-  BASE_MODEL_DIR: base_model
-  BASE_MODEL_NAME: base_model.h5
-  UPDATED_BASE_MODEL_NAME: updated_base_model.h5
-  CHECKPOINT_DIR: checkpoints
-  BASE_LOG_DIR: base_model_dir
-  TENSORBOARD_ROOT_LOG_DIR: tensorboard_log_dir
-  CALLBACKS_DIR: callbacks
+artifacts: 
+  artifacts_dir: artifacts
+  model_config_dir: model_config
+  test_loader_bin: test_loader.bin
+  train_loader_bin: train_loader.bin
 
-source_download_dirs:
-  - path_to_data_1
-  - path_to_data_1
+source_data_dirs:
+  data: data
 
-local_data_dirs:
-  - path_to_local_data_1
-  - path_to_local_data_2
+
+params:
+  BATCH_SIZE: 32
+  TEST_BATCH_SIZE: 1000
+  LR: 0.01
+  GAMMA: 0.7
+  SEED: 42
+  LOG_INTERVAL: 10
+  DRY_RUN: False
+  EPOCHS: 1
