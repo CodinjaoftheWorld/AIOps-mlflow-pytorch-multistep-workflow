@@ -5,6 +5,8 @@ from tqdm import tqdm
 import logging
 
 
+STAGE = "GET_DATA" ## <<change stage name
+
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
     level=logging.INFO, 
